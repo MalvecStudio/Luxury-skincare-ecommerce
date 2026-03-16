@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Veléa — Something Beautiful is Coming</title>
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/velea-favicon.png" />
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -60,27 +63,12 @@
     .nav-logo {
       display: flex;
       align-items: center;
-      gap: 10px;
-      font-size: 17px;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--white);
       text-decoration: none;
     }
 
-    .nav-logo-icon {
-      width: 32px; height: 32px;
-      background: var(--bg3);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .nav-logo-icon svg {
-      width: 18px; height: 18px;
-      stroke: var(--white);
-      fill: none;
-      stroke-width: 1.5;
+    .nav-logo-img {
+      height: 44px;
+      width: auto;
     }
 
     .nav-back {
@@ -288,13 +276,7 @@
   <!-- Nav -->
   <nav>
     <a href="index.html" class="nav-logo">
-      <div class="nav-logo-icon">
-        <svg viewBox="0 0 24 24" stroke-width="1.5">
-          <path d="M12 3c3.5 0 6.5 3 6.5 6.5 0 2-1 4-3 5.5L12 21l-3.5-6C6.5 13.5 5.5 11.5 5.5 9.5 5.5 6 8.5 3 12 3z"/>
-          <circle cx="12" cy="9" r="2"/>
-        </svg>
-      </div>
-      Veléa
+      <img src="assets/images/velea-logo.png" alt="Véléa" class="nav-logo-img" />
     </a>
 
     <a href="index.html" class="nav-back">

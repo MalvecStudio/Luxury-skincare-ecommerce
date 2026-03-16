@@ -13,6 +13,9 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/velea-favicon.png" />
 </head>
 <body>
 
@@ -21,13 +24,7 @@
 ═══════════════════════════════════════════════════════ -->
 <nav>
   <a href="#" class="nav-logo">
-    <div class="nav-logo-icon">
-      <svg viewBox="0 0 24 24" stroke-width="1.5">
-        <path d="M12 3c3.5 0 6.5 3 6.5 6.5 0 2-1 4-3 5.5L12 21l-3.5-6C6.5 13.5 5.5 11.5 5.5 9.5 5.5 6 8.5 3 12 3z"/>
-        <circle cx="12" cy="9" r="2"/>
-      </svg>
-    </div>
-    Veléa
+    <img src="assets/images/velea-logo.png" alt="Véléa" class="nav-logo-img" />
   </a>
 
   <ul class="nav-links">
@@ -55,7 +52,33 @@
       </svg>
     </button></a>
   </div>
+
+  <!-- Hamburger (mobile only) -->
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- Mobile Navigation Overlay -->
+<div class="mobile-nav" id="mobile-nav">
+  <a href="coming-soon.html">Shop</a>
+  <a href="coming-soon.html">Rituals</a>
+  <a href="coming-soon.html">Ingredients</a>
+  <a href="coming-soon.html">About</a>
+  <a href="coming-soon.html">Journal</a>
+  <div class="mobile-nav-bag">
+    <a href="coming-soon.html">
+      <button class="btn-bag" style="width:100%;justify-content:center;padding:14px 24px;">
+        Bag (0)
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 0 1-8 0"/>
+        </svg>
+      </button>
+    </a>
+  </div>
+</div>
 
 
 <!-- ═══════════════════════════════════════════════════════

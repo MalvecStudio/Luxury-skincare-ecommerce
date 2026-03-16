@@ -69,12 +69,46 @@
     });
   }
 
-  /* ── Init ─────────────────────────────────────────────────── */
+  /* ── Hamburger Menu ─────────────────────────────────── */
+  function handleHamburger() {
+    const btn       = document.getElementById('nav-hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    if (!btn || !mobileNav) return;
+
+    function openMenu() {
+      btn.classList.add('open');
+      mobileNav.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      btn.classList.remove('open');
+      mobileNav.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    btn.addEventListener('click', () => {
+      mobileNav.classList.contains('open') ? closeMenu() : openMenu();
+    });
+
+    // Close when a link inside mobile nav is clicked
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // Close on resize back to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) closeMenu();
+    }, { passive: true });
+  }
+
+  /* ── Init ─────────────────────────────────────────────── */
   function init() {
     alignPill();
     handleNavScroll();
     handleStickyBar();
     handleScrollReveal();
+    handleHamburger();
 
     // Re-align pill after fonts load
     setTimeout(alignPill, 150);
